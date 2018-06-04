@@ -1,0 +1,66 @@
+<html>
+<head>
+<style>
+body
+{
+background-image: url("C:\Users\HP\Desktop\html calculator");
+background-repeat: no-repeat;
+position: relative;
+margin-top: 20%;
+margin-left: 25%;
+margin-right: 25%;
+margin-bottom: 20%;
+border-style: solid;
+border-color: brown;
+
+background-color: aqua;
+}
+
+</style>
+
+
+<script>
+
+function Calc()
+{
+var z;
+var x=document.getElementById("no1").value;
+var y=document.getElementById("no2").value;
+var opt=document.getElementById("cal").value;
+if (opt=="Add")
+{
+z=parseInt(x)+parseInt(y);
+}
+if (opt=="Sub")
+{
+z=parseInt(x)-parseInt(y);
+}
+if (opt=="Mul")
+{
+z=parseInt(x)*parseInt(y);
+}
+if (opt=="Div")
+{
+z=parseInt(x)/parseInt(y);
+}
+document.getElementById("rs").innerHTML=z;
+}
+</script>
+</head>
+<body>
+
+<p> Calculator </p>
+<input type="number" id="no1" placeholder=" type a number here"/> <br> <br>
+<select id="cal">
+<option value="Add"> Addition (+)</option>
+<option value="Sub"> Subtraction(-) </option>
+<option value="Mul"> Multiplication(*) </option>
+<option value="Div">  Division (/)</option>
+</select> <br> <br>
+<input type="number" id="no2" placeholder=" type another number here"><br> <br>
+
+<p> Result= <span id="rs"> 0 </span> </p><br>
+<input type="button" id="b1" value="Calculate" onclick="Calc()">
+
+</body>
+</html>
